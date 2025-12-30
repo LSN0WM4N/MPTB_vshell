@@ -53,6 +53,10 @@ Las variables requeridas son:
 | `ADMIN` | ID numérico del administrador principal. |
 | `HTTP_PROXY` | (Opcional) Proxy HTTP. |
 | `HTTPS_PROXY` | (Opcional) Proxy HTTPS. |
+| `GROQ_API_KEY` | (Opcional Para tener [groq](https://console.groq.com/home) disponible). |
+| `CEREBRAS_API_KEY` | (Opcional) Para tener [cerebras](https://console.groq.com/home) disponible. |
+| `OPEN_ROUTER_API_KEY` | (Opcional) Para tener [OpenAI](https://openrouter.ai/) disponible. | 
+
 
 ## ▶️ Uso
 
@@ -78,9 +82,14 @@ MPTB_vshell/
 │   ├── gvar.py             # ⚙️ Config: Variables globales y entorno
 │   ├── utils.py            # 🛠️ Utils: Herramientas varias
 │   ├── core/               # ⚡ Core: Comandos, colas y workers
-│   ├── downup/             # 📥📤 DownUp: Descarga y subida de medios
+│   ├── downup/             # 📥 DownUp: Descarga y subida de medios
 │   ├── entity/             # 👤 Entity: Definición de objetos (User, etc.)
 │   └── fuse/               # 🔌 Fuse: Módulos adicionales/experimentales
+├── services/               # 📋 Servicios extrenos
+│   ├── cerebras.py         # Servicio con Cerebras SDK 
+│   ├── groq.py             # Servicio con groq SDK 
+│   └── open_ai.py          # Servicio con OpenAI sdk
+├── types/                  # Tipado
 ├── web/                    # 🌐 Web: Interfaz web de administración
 │   ├── web.py
 │   └── src/
