@@ -6,3 +6,7 @@ pyrogram
 TgCrypto
 flask
 psutil
+
+# AI Services
+groq
+cerebras.cloud.sdk

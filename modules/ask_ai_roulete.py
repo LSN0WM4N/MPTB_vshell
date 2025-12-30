@@ -1,12 +1,15 @@
 from typing import List
 
 from ..services.groq import GroqService
+from ..services.open_ai import OpenAIService
 from ..services.cerebras import CerebrasService
-from ..types.ai_services import ChatMessage, AIService
+
+from ..types.ai_services import AIService
 
 services: List[AIService] = [
   GroqService,
-  CerebrasService
+  CerebrasService,
+  OpenAIService,
 ]
 
 actual_service = 0
